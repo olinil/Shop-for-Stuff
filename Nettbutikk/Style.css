@@ -1,0 +1,104 @@
+/*
+#020024
+#090979
+#00d4ff
+
+Logo farge:
+Lys: #ed3575 (ec3575)
+Mørk: #cb1957 (cb1958)
+
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 170px 700px auto 100px;
+    grid-template-areas:
+    "header header header header header header header"
+    "img img img img img img img"
+    "main main main main main main main"
+    "footer footer footer footer footer footer footer"
+    ;
+}
+
+#header-pre {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "logo logo logo menu menu"
+    ;
+
+    background-color: rgba(255, 255, 255, .85);
+}
+
+#header-pre .logo {
+    overflow: hidden;
+    grid-area: logo;
+    padding: 20px;
+}
+
+#header-pre .logo img {
+    height: 100px;
+    transition: 0.5s;
+}
+
+#header-pre .logo img:hover {
+    height: 150px;
+}
+
+#header-pre .menu{
+    grid-area: menu;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    background-color: #ed3575;
+    padding: 20px;
+    min-width: 70px;
+    border: solid 2px #cb1957;
+    transition: 0.3s;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover {
+    border: solid 2px #ed3575;
+    color: #ed3575;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.img {
+    grid-area: img;
+    overflow: hidden;
+    opacity: .50;
+}
+
+.img img {
+    width: 100vw;
+}
+
+.main {
+    grid-area: main;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .85);
+}
